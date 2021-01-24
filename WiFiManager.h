@@ -10,6 +10,7 @@
  * @license MIT
  */
 
+#include "FirebaseApp.h"
 
 #ifndef WiFiManager_h
 #define WiFiManager_h
@@ -151,6 +152,9 @@ class WiFiManager
     WiFiManager();
     ~WiFiManager();
     void WiFiManagerInit();
+
+    // testing
+    FireBaseApp app;
 
     // auto connect to saved wifi, or custom, and start config portal on failures
     boolean       autoConnect();

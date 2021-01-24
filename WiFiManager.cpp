@@ -208,6 +208,8 @@ WiFiManager::WiFiManager() {
 }
 
 void WiFiManager::WiFiManagerInit(){
+  FireBaseApp a;
+  this->app = a;
   setMenu(_menuIdsDefault);
   if(_debug && _debugLevel > DEBUG_DEV) debugPlatformInfo();
   _max_params = WIFI_MANAGER_MAX_PARAMS;
@@ -260,6 +262,7 @@ boolean WiFiManager::autoConnect() {
   return autoConnect(ssid.c_str(), NULL);
 }
 
+// Possible place to add check for proper login?
 /**
  * [autoConnect description]
  * @access public
@@ -2227,6 +2230,7 @@ void WiFiManager::handleClose(){
   server->send(200, FPSTR(HTTP_HEAD_CT), page);
 }
 
+// Maybe some place to update failure status for failed app login?
 void WiFiManager::reportStatus(String &page){
   updateConxResult(WiFi.status());
   String str;
