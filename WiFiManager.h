@@ -10,8 +10,6 @@
  * @license MIT
  */
 
-#include "FirebaseApp.h"
-
 #ifndef WiFiManager_h
 #define WiFiManager_h
 
