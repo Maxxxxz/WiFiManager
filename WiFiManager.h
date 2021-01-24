@@ -151,9 +151,6 @@ class WiFiManager
     ~WiFiManager();
     void WiFiManagerInit();
 
-    // testing
-    FireBaseApp app;
-
     // auto connect to saved wifi, or custom, and start config portal on failures
     boolean       autoConnect();
     boolean       autoConnect(char const *apName, char const *apPassword = NULL);
